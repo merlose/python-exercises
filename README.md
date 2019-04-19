@@ -1,2 +1,2 @@
 # python-exercises
-exercises and examples
+exercises and examples from tutorials

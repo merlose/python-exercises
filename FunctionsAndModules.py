@@ -62,3 +62,55 @@ print (someOtherVariable)
 
 # any code after the return statement will not be used.
 # again, return cannot be used outside of a def
+
+
+# FUNCTIONS
+
+# functions are created differently to variables,
+# they can be assigned and reassigned to variables
+# and later referenced by the new variable names:
+
+def bahamut(x,y):
+    return x / y
+
+a = 16
+b = 4
+operation = bahamut
+print ("16 / 4")
+print (operation(a,b))
+
+    # above: says bahamut is a function that contains x and y
+    # it returns x divided by y when called
+    #then we set 3 new variables: a, b and operation
+    # a and b contain numbers. operation is a variable for bahamut
+    # when printing operation we have to include the arguments
+    # the arguments (a,b) work in place of bahamut's (x,y)
+
+print (bahamut(a,b)) # using bahamut itself instead of the variable
+                     # 'operation' produces the same result
+
+borf = 200
+dog = 5
+print ("200 / 5")
+print (operation(borf,dog))
+
+print ("200 / 4 * 200 / 5")
+print (operation(borf,b)*operation(borf,dog))
+
+output = operation(a,b) # here showing you can chain variables
+print (output)
+
+# Functions can also be used as arguments of other functions:
+
+def gains(g, h):
+  return g + h
+
+def do_twice(func, g, h):
+  return func(func(g, h), func(g, h))
+
+g = 5
+h = 10
+
+print(do_twice(gains, g, h))
+
+# Modules

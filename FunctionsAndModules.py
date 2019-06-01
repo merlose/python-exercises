@@ -114,3 +114,26 @@ h = 10
 print(do_twice(gains, g, h))
 
 # Modules
+ # pieces of code written to fulfill tasks. e.g. RNG, maths ops etc
+ # these are pre-built into the program(?)
+
+import random
+
+for i in range(7):
+    value = random.randint(70, 79)
+    print(value)
+
+# take the form "from module_name import var",
+# then var can be used as if it were defined normally in your code.
+
+from math import pi     # imports only the pi constant
+print (pi)              # from the math module
+
+# trying to import an unavailable module will cause an ImportError
+
+# rename modules (eg. if they have long or confusing names)
+# by using "as"
+
+from math import sqrt as squareRoot # renaming "sqrt"
+print (squareRoot(250)) # using its new name in 2 examples
+print (squareRoot(pi))

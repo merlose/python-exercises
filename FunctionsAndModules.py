@@ -115,7 +115,11 @@ print(do_twice(gains, g, h))
 
 # Modules
  # pieces of code written to fulfill tasks. e.g. RNG, maths ops etc
- # these are pre-built into the program(?)
+ 
+ # 3 main types:
+    # pre-installed modules in Python's standard library.
+    # modules installed from external sources
+    # and modules you write yourself
 
 import random
 
@@ -137,3 +141,33 @@ print (pi)              # from the math module
 from math import sqrt as squareRoot # renaming "sqrt"
 print (squareRoot(250)) # using its new name in 2 examples
 print (squareRoot(pi))
+
+# complete documentation of python's standard library can be found online
+
+# a way to install third party modules is a program called "pip"
+# these are stored on the Python package index (PyPI)
+# to install, go to the command Command Prompt and enter
+# "pip install library_name"
+
+print ("scribble pad")
+
+def pebble(k):
+    for j in range(k):
+        print (j)
+        return
+pebble(10)
+
+def sand(b):
+    res = 0
+    for v in range(b):
+        res += v    # SAME AS: res = res + v
+    return res
+print (sand(4))     # runs the loop 4 times
+
+# therefore:
+#1:     res = 0 (res) + 0 (v)
+#2:     res = 0 (res) + 1 (v 2nd loop)
+#3:     res = 1 (0+1) + 2 (v 3rd loop)
+#4:     res = 3 (1+2) + 3 (v 4th loop)
+
+# res is not inside the loop so it doesn't reset to 0 each loop
